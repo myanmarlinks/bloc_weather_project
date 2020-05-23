@@ -3,10 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_tuto/bloc/search/bloc.dart';
 import 'package:weather_tuto/bloc/weather/bloc.dart';
+import 'package:weather_tuto/helpers/simple_bloc_delegate.dart';
 import 'package:weather_tuto/network/api_service.dart';
 import 'package:weather_tuto/ui/weather_home.dart';
 
 void main() {
+  BlocSupervisor.delegate = SimpleBlocDelegate();
   runApp(MyApp());
 }
 

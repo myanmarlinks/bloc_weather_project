@@ -21,6 +21,7 @@ class _SearchAreaState extends State<SearchArea> {
   @override
   Widget build(BuildContext context) {
 
+    // ignore: close_sinks
     final searchBloc = BlocProvider.of<SearchBloc>(context);
 
     return Scaffold(
@@ -90,14 +91,14 @@ class _SearchAreaState extends State<SearchArea> {
                   if(state is CityEmpty) {
                     return Center(
                       child: Text(
-                        "Type something to search",
+                        "Type city to search",
                       ),
                     );
                   }
                   if(state is CityNotLoaded) {
                     return Center(
                       child: Text(
-                        "No Search Data"
+                        "No city available"
                       ),
                     );
                   }
