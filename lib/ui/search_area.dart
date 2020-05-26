@@ -107,7 +107,9 @@ class _SearchAreaState extends State<SearchArea> {
                       child: Text("Something Wrong!")
                     );
                   }
-                  return null;
+                  return Center(
+                    child: Text("Null"),
+                  );
                 },
               ),
             )
